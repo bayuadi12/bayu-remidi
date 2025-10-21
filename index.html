@@ -2,9 +2,10 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Bayu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Bayu</title>
     <style>
-        /* Reset & Umum */
+        /* Reset dasar untuk konsistensi */
         * {
             margin: 0;
             padding: 0;
@@ -12,25 +13,33 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
         }
 
-        /* Header */
+        /* Header Styling */
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        header .logo {
-            font-size: 24px;
+        .logo {
+            font-size: 2em;
             font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
         }
 
         nav ul {
@@ -39,82 +48,126 @@
         }
 
         nav ul li {
-            margin-left: 20px;
+            margin-left: 30px;
         }
 
         nav ul li a {
-            color: white;
             text-decoration: none;
+            color: #333;
             font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            background-color: #667eea;
+            color: white;
         }
 
-        /* Konten */
-        .content {
-            flex: 1; /* Agar konten bisa dorong footer ke bawah */
-            padding: 40px;
-            background-color: #ecf0f1;
+        /* Konten Utama */
+        main {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .content h1 {
-            color: #34495e;
-            margin-bottom: 20px;
+        .hero {
+            margin-bottom: 40px;
         }
 
-        .content p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+        .hero h1 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .content-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
         }
 
         /* Footer */
         footer {
-            background-color: #2c3e50;
+            background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px 0;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-    <!-- Header -->
     <header>
-        <div class="logo">website saya</div>
+        <a href="#" class="logo">BayuWeb</a>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#kontak">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Konten -->
-    <div class="content">
-        <h1>Selamat Datang di website Bayu</h1>
-        <p>Halo, saya <strong>Bayu</strong>! Ini adalah website sederhana yang dibuat sebagai tugas remidial TKJ1.</p>
-        <p>"Dalam hidup, tidak ada jalan pintas menuju keberhasilan. Semua butuh proses, perjuangan, dan kesabaran. Mungkin hari ini kamu merasa lelah, gagal, atau tidak dihargai. Tapi ingat, setiap usaha yang kamu lakukan tidak akan pernah sia-sia. Bahkan ketika tidak ada yang melihat kerja kerasmu, Tuhan melihat. Teruslah melangkah meski perlahan, karena langkah kecil hari ini bisa menjadi lompatan besar di masa depan. Jangan bandingkan dirimu dengan orang lain—bandingkan dirimu dengan dirimu yang kemarin. Jadilah versi terbaik dari dirimu sendiri. Karena kamu layak untuk berhasil, dan kamu pasti bisa!"</p>
+    <main id="home">
+        <section class="hero">
+            <h1>Selamat Datang di Dunia Bayu</h1>
+            <p>Halaman web ini dibuat untuk memperkenalkan Bayu, seorang individu kreatif dan penuh inspirasi. Jelajahi lebih lanjut tentang dirinya!</p>
+        </section>
 
-        <!-- Tambahkan konten dummy untuk efek scroll -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac sapien non nulla feugiat elementum. Donec facilisis augue sed enim cursus, at feugiat massa consequat.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur fringilla, lorem a pretium consequat, risus nisl fermentum odio, sit amet gravida nulla orci vel lacus.</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac sapien non nulla feugiat elementum. Donec facilisis augue sed enim cursus, at feugiat massa consequat.</p>
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur fringilla, lorem a pretium consequat, risus nisl fermentum odio, sit amet gravida nulla orci vel lacus.</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium...</p>
-        <p>terima kasih sudah scroll sampai ke bawah!</p>
-        <!-- Tambahkan lebih banyak agar terlihat efek scroll -->
-        <p style="margin-top: 300px;"></p>
-    </div>
+        <section class="content-section">
+            <div class="card">
+                <h2>Tentang Bayu</h2>
+                <p>Bayu adalah nama yang penuh semangat dan inovasi. Ia dikenal sebagai seseorang yang selalu mencari cara baru untuk belajar dan berkembang. Dengan latar belakang di bidang teknologi, Bayu suka membuat hal-hal menarik seperti halaman web ini.</p>
+            </div>
+            <div class="card">
+                <h2>Hobi Bayu</h2>
+                <p>Bayu menyukai coding, desain grafis, dan eksplorasi dunia digital. Ia percaya bahwa teknologi bisa membuat hidup lebih mudah dan menyenangkan. Mari bergabung dalam petualangan kreatifnya!</p>
+            </div>
+            <div class="card">
+                <h2>Visi Bayu</h2>
+                <p>Bayu bermimpi untuk menciptakan solusi teknologi yang bermanfaat bagi masyarakat. Dengan dedikasi dan kreativitas, ia terus belajar dan berinovasi setiap hari.</p>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer>
-        remidial tkj1
+        Remedial TKJ1
     </footer>
-
 </body>
 </html>
