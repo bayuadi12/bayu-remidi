@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Web Bayu</title>
+    <title>About & Contact - Bayu Design</title>
     <style>
-        /* Reset dasar untuk konsistensi */
+        /* Reset dasar */
         * {
             margin: 0;
             padding: 0;
@@ -16,13 +16,13 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        /* Header Styling */
+        /* Header */
         header {
             background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
@@ -38,7 +38,7 @@
         .logo {
             font-size: 2em;
             font-weight: bold;
-            color: #667eea;
+            color: #ff6b6b;
             text-decoration: none;
         }
 
@@ -61,64 +61,111 @@
         }
 
         nav ul li a:hover {
-            background-color: #667eea;
+            background-color: #ff6b6b;
             color: white;
         }
 
-        /* Konten Utama */
+        /* Main Content */
         main {
             flex: 1;
             padding: 40px 20px;
-            text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .hero {
-            margin-bottom: 40px;
+        section {
+            margin-bottom: 60px;
         }
 
-        .hero h1 {
+        h1, h2 {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
             font-size: 3em;
-            color: #667eea;
-            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.2em;
-            color: #666;
+        h2 {
+            font-size: 2.5em;
         }
 
-        .content-section {
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .about-content {
             display: flex;
-            justify-content: space-around;
+            align-items: center;
             flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 20px;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            background: url('https://via.placeholder.com/300x300?text=Bayu+Design+Team') no-repeat center center/cover;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff5252;
+        }
+
+        .contact-info {
+            text-align: center;
             margin-top: 40px;
         }
 
-        .card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .card h2 {
-            color: #667eea;
+        .contact-info p {
             margin-bottom: 10px;
-        }
-
-        .card p {
-            color: #666;
         }
 
         /* Footer */
@@ -128,46 +175,60 @@
             text-align: center;
             padding: 20px;
             font-size: 1.2em;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">BayuWeb</a>
+        <a href="#" class="logo">Bayu Design</a>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#kontak">Kontak</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="home">
-        <section class="hero">
-            <h1>Selamat Datang di Dunia Bayu</h1>
-            <p>Halaman web ini dibuat untuk memperkenalkan Bayu, seorang individu kreatif dan penuh inspirasi. Jelajahi lebih lanjut tentang dirinya!</p>
+    <main>
+        <section id="about">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <p>Selamat datang di Bayu Design! Kami adalah tim kreatif yang berdedikasi untuk menciptakan desain web yang luar biasa. Didirikan oleh Bayu, seorang ahli di bidang teknologi dan desain, kami fokus pada solusi web yang responsif, inovatif, dan user-friendly.</p>
+                    <p>Dengan pengalaman bertahun-tahun, kami telah membantu banyak klien mewujudkan visi mereka melalui website yang tidak hanya indah secara visual, tetapi juga fungsional dan efektif dalam menjangkau audiens target.</p>
+                    <p>Misi kami adalah membuat internet lebih menarik dan mudah diakses untuk semua orang. Bergabunglah dengan kami dan lihat bagaimana kami bisa mengubah ide Anda menjadi kenyataan digital!</p>
+                </div>
+            </div>
         </section>
 
-        <section class="content-section">
-            <div class="card">
-                <h2>Tentang Bayu</h2>
-                <p>Bayu adalah nama yang penuh semangat dan inovasi. Ia dikenal sebagai seseorang yang selalu mencari cara baru untuk belajar dan berkembang. Dengan latar belakang di bidang teknologi, Bayu suka membuat hal-hal menarik seperti halaman web ini.</p>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Kirim Pesan</button>
+                </form>
             </div>
-            <div class="card">
-                <h2>Hobi Bayu</h2>
-                <p>Bayu menyukai coding, desain grafis, dan eksplorasi dunia digital. Ia percaya bahwa teknologi bisa membuat hidup lebih mudah dan menyenangkan. Mari bergabung dalam petualangan kreatifnya!</p>
-            </div>
-            <div class="card">
-                <h2>Visi Bayu</h2>
-                <p>Bayu bermimpi untuk menciptakan solusi teknologi yang bermanfaat bagi masyarakat. Dengan dedikasi dan kreativitas, ia terus belajar dan berinovasi setiap hari.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> bayudesign@example.com</p>
+                <p><strong>Telepon:</strong> 0812-3456-7890</p>
+                <p><strong>Alamat:</strong> Jl. Teknologi No. 123, Jakarta, Indonesia</p>
             </div>
         </section>
     </main>
 
     <footer>
-        Remedial TKJ1
+        <p>&copy; 2023 Bayu Design. Remedial TKJ1</p>
     </footer>
 </body>
 </html>
